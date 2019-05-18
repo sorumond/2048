@@ -2,3 +2,107 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background_empty: rgba(238, 228, 218, 0.35);
+    --background_2: #eee4da;
+    --background_4: #ede0c8;
+    --background_8: #f2b179;
+    --background_16: #f59563;
+    --background_32: #f67c5f;
+    --background_64: #f65e3b;
+    --background_128: #edcf72;
+    --background_256: #edcc61;
+    --background_512: #edc850;
+    --background_1024: #edc53f;
+    --background_2048: #edc22e;
+    --white_color: #f9f6f2;
+}
+
+.game__block {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game__header {
+    flex-basis: 100px;
+    align-self: flex-start;
+}
+
+.game__field {
+    width: 600px;
+    background: #bbada0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.game__squares {
+    width: calc(600px/4 - 30px);
+    height: calc(600px/4 - 30px);
+    margin: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background_empty);
+    font-size: 42px;
+    border-radius: 5px;
+}
+
+.game__squares_2{
+    background: var(--background_2);
+}
+
+.game__squares_4 {
+    background: var(--background_4);
+}
+
+.game__squares_8 {
+    background: var(--background_8);
+    color: var(--white_color);
+}
+
+.game__squares_16 {
+    background: var(--background_16);
+    color: var(--white_color);
+}
+
+.game__squares_32 {
+    background: var(--background_32);
+    color: var(--white_color);
+}
+
+.game__squares_64 {
+    background: var(--background_64);
+    color: var(--white_color);
+}
+
+.game__squares_128 {
+    background: var(--background_128);
+    color: var(--white_color);
+}
+
+.game__squares_256 {
+    background: var(--background_256);
+    color: var(--white_color);
+}
+
+.game__squares_512 {
+    background: var(--background_512);
+    color: var(--white_color);
+}
+
+.game__squares_1024 {
+    background: var(--background_1024);
+    color: var(--white_color);
+}
+
+.game__squares_2048 {
+    background: var(--background_2048);
+    color: var(--white_color);
+}
+
