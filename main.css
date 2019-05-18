@@ -1,3 +1,5 @@
+@import "font.css";
+
 * {
     box-sizing: border-box;
 }
@@ -16,6 +18,7 @@
     --background_1024: #edc53f;
     --background_2048: #edc22e;
     --white_color: #f9f6f2;
+    --main_font: "Clear Sans", sans-serif;
 }
 
 .game__block {
@@ -49,8 +52,10 @@
     align-items: center;
     justify-content: center;
     background: var(--background_empty);
-    font-size: 42px;
+    font-size: 55px;
     border-radius: 5px;
+    font-family: var(--main_font);
+    font-weight: bold;
 }
 
 .game__squares_2{
