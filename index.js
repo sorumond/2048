@@ -2,10 +2,10 @@ let values = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
-    [0, 0, 0, 0]
+    [2, 2, 8, 8]
 ];
 
-randomValueStart();
+// randomValueStart();
 
 console.log(values);
 
@@ -31,7 +31,7 @@ function moveLeft() {
                 positionNumber--;
                 isMoved = true;
                 continue;
-            }   else if (positionNumber > 0 && values[i][positionNumber - 1] === values[i][positionNumber] && isMarged) {
+            }   else if (positionNumber > 0 && values[i][positionNumber - 1] && isMarged) {
                 positionNumber++;
                 isMarged = false;
                 continue;
@@ -69,7 +69,7 @@ function moveUp() {
                positionNumber--;
                isMoved = true;
                continue;
-           } else if (positionNumber > 0 && values[positionNumber - 1] === values[positionNumber][k] && isMarged) {
+           } else if (positionNumber > 0 && values[positionNumber - 1] && isMarged) {
                positionNumber++;
                isMarged = false;
                continue;
@@ -95,7 +95,7 @@ function moveRight() {
         while (positionNumber >= 0) {
             if (values[i][positionNumber] === 0) {
                 positionNumber--;
-                continue;
+                    continue;
             } else if (positionNumber < 3 && values[i][positionNumber] === values[i][positionNumber + 1] && !isMarged) {
                 values[i][positionNumber + 1] *= 2;
                 values[i][positionNumber] = 0;
@@ -109,7 +109,7 @@ function moveRight() {
                 positionNumber++;
                 isMoved = true;
                 continue;
-            } else if (positionNumber < 3 && isMarged && values[i][positionNumber] === values[i][positionNumber + 1]) {
+            } else if (positionNumber < 3 && isMarged && values[i][positionNumber + 1]) {
                 positionNumber--;
                 isMarged = false;
                 continue;
@@ -130,12 +130,11 @@ function moveRight() {
 
 function moveDown() {
     let isMoved = false;
-    debugger;
     for (let k = 0; k < values.length; k++) {
         let positionNumber = 2;
         let isMarged = false;
         while (positionNumber >= 0) {
-            // debugger;
+            // debugg0er;
             if (values[positionNumber][k] === 0) {
                 positionNumber--;
                 continue;
@@ -152,7 +151,7 @@ function moveDown() {
                 positionNumber++;
                 isMoved = true;
                 continue;
-            } else if (positionNumber < 3 && isMarged && values[positionNumber][k] === values[positionNumber + 1][k]) {
+            } else if (positionNumber < 3 && isMarged && values[positionNumber + 1][k]) {
                 positionNumber--;
                 isMarged = false;
                 continue;
