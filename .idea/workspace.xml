@@ -1,28 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/index.js" line="164" />
+    <bookmark url="file://$PROJECT_DIR$/index.js" line="147" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d34a77b0-2731-4d4c-a3c0-a492175d4006" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/font.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Bold-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/ClearSans-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keybordBind.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font.css" beforeDir="false" afterPath="$PROJECT_DIR$/font.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="306">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -47,17 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="952">
-              <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/font.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="1003">
+              <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -65,8 +45,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="179" column="17" selection-start-line="179" selection-start-column="17" selection-end-line="179" selection-end-column="17" />
+            <state relative-caret-position="470">
+              <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/keybordBind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -74,13 +63,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="340">
+              <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
               <folding>
                 <element signature="n#!!block;n#randomInt#0" />
                 <element signature="n#!!block;n#addRandomValue#0" />
-                <element signature="n#!!block;n#loseCheck#0" />
+                <element signature="n#!!block;n#randomValueStart#0" />
+                <element signature="e#1162#1595#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/font.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -91,8 +90,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -108,12 +107,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/fonts/font.css" />
+        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/font.css" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/KeybordBind.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/keybordBind.js" />
       </list>
     </option>
   </component>
@@ -207,6 +208,7 @@
       <workItem from="1558003393342" duration="24979000" />
       <workItem from="1558086298691" duration="17237000" />
       <workItem from="1558162386362" duration="9715000" />
+      <workItem from="1558252511145" duration="487000" />
     </task>
     <task id="LOCAL-00001" summary="fixed bug if with merge">
       <created>1558164303278</created>
@@ -215,11 +217,18 @@
       <option name="project" value="LOCAL" />
       <updated>1558164303278</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added new font">
+      <created>1558196285682</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558196285682</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65848000" />
+    <option name="totallyTimeSpent" value="70608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -277,46 +286,55 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed bug if with merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug if with merge" />
+    <MESSAGE value="added new font" />
+    <option name="LAST_COMMIT_MESSAGE" value="added new font" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="n#!!block;n#randomInt#0" />
-            <element signature="n#!!block;n#addRandomValue#0" />
-            <element signature="n#!!block;n#loseCheck#0" />
-          </folding>
+        <state relative-caret-position="1003">
+          <caret line="59" column="30" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="179" column="17" selection-start-line="179" selection-start-column="17" selection-end-line="179" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="34" lean-forward="true" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+        <state relative-caret-position="470">
+          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="306">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/font.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        <state relative-caret-position="272">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!block;n#randomInt#0" />
+            <element signature="n#!!block;n#addRandomValue#0" />
+            <element signature="n#!!block;n#randomValueStart#0" />
+            <element signature="e#1162#1595#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keybordBind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

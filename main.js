@@ -41,3 +41,17 @@ function randomValueStart() {
         }
     }
 }
+
+const render = () => {
+    let html = ``;
+    for (let i = 0; i < values.length; i++) {
+        for (let k = 0; k < values.length; k++) {
+            if (values[i][k] !== 0) {
+                html += `<div class="game__squares game__squares_${values[i][k]}">${values[i][k]}</div>`
+            } else {
+                html += `<div class="game__squares"></div>`
+            }
+        }
+    }
+    document.querySelector('.game__field').innerHTML = html;
+};
