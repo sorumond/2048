@@ -11,7 +11,16 @@ randomValueStart();
 
 render();
 
-console.log(values);
+function newGame() {
+    values = [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ];
+    randomValueStart();
+    render();
+}
 
 function moveLeft() {
     let isMoved = false;
@@ -48,6 +57,8 @@ function moveLeft() {
         addRandomValue();
         render();
     }
+    console.log(values);
+    console.log(previousValues);
 }
 
 function moveUp() {
@@ -131,7 +142,6 @@ function moveDown() {
         let positionNumber = 2;
         let isMarged = false;
         while (positionNumber >= 0) {
-            // debugg0er;
             if (values[positionNumber][k] === 0) {
                 positionNumber--;
             } else if (positionNumber < 3 && values[positionNumber][k] === values[positionNumber + 1][k] && !isMarged) {

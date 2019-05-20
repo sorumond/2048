@@ -9,13 +9,11 @@ function addRandomValue() {
     while (added === false) {
         let randomI = randomInt(0, 4);
         let randomK = randomInt(0, 4);
-        console.log(randomI, randomK);
         if (values[randomI][randomK] === 0) {
             added = true;
             Math.random() > 0.9 ? values[randomI][randomK] = 4 : values[randomI][randomK] = 2;
         }
     }
-    console.log(values);
 }
 
 function loseCheck() {
