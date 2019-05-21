@@ -99,7 +99,6 @@ const renderLoose = function () {
 };
 
 function newGame() {
-    console.log(1);
     values = [
         [0, 0, 0, 0],
         [0, 0, 0, 0],
