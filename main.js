@@ -92,7 +92,7 @@ const render = () => {
 };
 
 const renderLoose = function () {
-    document.querySelector('.game__field').innerHTML += `<div class="loose">
+    document.querySelector('.game__field').innerHTML = `<div class="loose">
             <span class="loose__loose">You loose</span>
             <input type="button" onclick="newGame()" class="loose__new-game" value="New Game">
         </div>`
