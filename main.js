@@ -17,15 +17,44 @@ function addRandomValue() {
 }
 
 function loseCheck() {
+    let gotMove = false;
+    let zeroCheck = false;
     let isLose = true;
     for (let i = 0; i < values.length; i++) {
         for (let k = 0; k < values.length; k++) {
             if (values[i][k] === 0) {
-                isLose = false;
+                zeroCheck = true;
             }
         }
     }
-    return isLose
+    if (!zeroCheck) {
+        for (let i = 0; i < values.length; i++) {
+            for (let k = 0; k < values.length; k++) {
+                let rightCell = values[i][k + 1];
+                let leftCell = values[i][k - 1];
+                let upCell;
+                let downCell;
+                if (values[i - 1]) {
+                     upCell = values[i - 1][k];
+                } else {
+                     upCell = 0;
+                }
+                if (values[i + 1]) {
+                     downCell = values[i + 1][k];
+                } else {
+                     downCell = 0;
+                }
+                let currentCell = values[i][k];
+                if (currentCell === leftCell || currentCell === rightCell || currentCell === upCell || currentCell === downCell) {
+             gotMove = true;
+                }
+            }
+        }
+    }
+    if (zeroCheck || gotMove) {
+        isLose = false;
+    }
+    return isLose;
 }
 
 function randomValueStart() {
@@ -44,7 +73,9 @@ const render = () => {
     let html = ``;
     for (let i = 0; i < values.length; i++) {
         for (let k = 0; k < values.length; k++) {
-            if (values[i][k] !== 0) {
+            if (values[i][k] > 2048) {
+                html += `<div class="game__squares game__squares_2048">${values[i][k]}</div>`
+            } else if (values[i][k] !== 0) {
                 html += `<div class="game__squares game__squares_${values[i][k]}">${values[i][k]}</div>`
             } else {
                 html += `<div class="game__squares"></div>`
@@ -52,4 +83,30 @@ const render = () => {
         }
     }
     document.querySelector('.game__field').innerHTML = html;
+    document.querySelector('.game__score').innerHTML = `               <span class="game__score-title">
+                   Score
+               </span>
+                <span class="game__score-num">
+                    ${score}
+                </span>`
 };
+
+const renderLoose = function () {
+    document.querySelector('.game__field').innerHTML += `<div class="loose">
+            <span class="loose__loose">You loose</span>
+            <input type="button" onclick="newGame()" class="loose__new-game" value="New Game">
+        </div>`
+};
+
+function newGame() {
+    console.log(1);
+    values = [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ];
+    score = 0;
+    randomValueStart();
+    render();
+}

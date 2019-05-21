@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <title>2048</title>
     <link rel="stylesheet" href="main.css">
+
 </head>
 <body>
 <main class="game__block">
     <div class="game__header">
-        Rating
+        <div class="game__header-top">
+            <div class="game__name">
+                2048
+            </div>
+            <div class="game__score">
+
+            </div>
+        </div>
+        <div class="game__header-bottom">
+            <div class="game__intro">
+                Join the numbers and get to the <span class="game__intro-bold">2048 tile!</span>
+            </div>
+            <input id="new__game" type="button" class="game__new-game" value="New Game">
+        </div>
     </div>
     <div class="game__field">
 
     </div>
+
 </main>
 <script src="main.js"></script>
 <script src="index.js"></script>

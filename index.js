@@ -7,20 +7,11 @@ let values = [
     [0, 0, 0, 0],
 ];
 
+let score = 0;
+
 randomValueStart();
 
 render();
-
-function newGame() {
-    values = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]
-    ];
-    randomValueStart();
-    render();
-}
 
 function moveLeft() {
     let isMoved = false;
@@ -33,6 +24,7 @@ function moveLeft() {
             } else if (positionNumber > 0 && values[i][positionNumber - 1] === values[i][positionNumber] && !isMarged) {
                 values[i][positionNumber - 1] *= 2;
                 values[i][positionNumber] = 0;
+                score += values[i][positionNumber - 1];
                 isMarged = true;
                 positionNumber++;
                 isMoved = true;
@@ -49,16 +41,13 @@ function moveLeft() {
             }
         }
     }
-    if (loseCheck()) {
-        console.log('You loose');
-        return;
-    }
     if (isMoved) {
         addRandomValue();
         render();
     }
-    console.log(values);
-    console.log(previousValues);
+    if (loseCheck()) {
+        renderLoose();
+    }
 }
 
 function moveUp() {
@@ -72,6 +61,7 @@ function moveUp() {
             } else if (positionNumber > 0 && values[positionNumber - 1][k] === values[positionNumber][k] && !isMarged) {
                 values[positionNumber - 1][k] *= 2;
                 values[positionNumber][k] = 0;
+                score += values[positionNumber - 1][k];
                 isMarged = true;
                 positionNumber++;
                 isMoved = true;
@@ -88,13 +78,13 @@ function moveUp() {
             }
         }
     }
-    if (loseCheck()) {
-        console.log('You loose');
-        return;
-    }
+
     if (isMoved) {
-        addRandomValue()
+        addRandomValue();
         render();
+    }
+    if (loseCheck()) {
+        renderLoose();
     }
 }
 
@@ -109,6 +99,7 @@ function moveRight() {
             } else if (positionNumber < 3 && values[i][positionNumber] === values[i][positionNumber + 1] && !isMarged) {
                 values[i][positionNumber + 1] *= 2;
                 values[i][positionNumber] = 0;
+                score += values[i][positionNumber + 1];
                 isMarged = true;
                 positionNumber--;
                 isMoved = true;
@@ -126,13 +117,13 @@ function moveRight() {
         }
     }
 
-    if (loseCheck()) {
-        console.log('You loose');
-        return;
-    }
+
     if (isMoved) {
         addRandomValue();
         render();
+    }
+    if (loseCheck()) {
+        renderLoose();
     }
 }
 
@@ -147,6 +138,7 @@ function moveDown() {
             } else if (positionNumber < 3 && values[positionNumber][k] === values[positionNumber + 1][k] && !isMarged) {
                 values[positionNumber + 1][k] *= 2;
                 values[positionNumber][k] = 0;
+                score += values[positionNumber + 1][k];
                 isMarged = true;
                 positionNumber--;
                 isMoved = true;
@@ -164,12 +156,12 @@ function moveDown() {
 
         }
     }
-    if (loseCheck()) {
-        console.log('You loose');
-        return;
-    }
+
     if (isMoved) {
         addRandomValue();
         render();
+    }
+    if (loseCheck()) {
+        renderLoose();
     }
 }

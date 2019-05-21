@@ -23,3 +23,7 @@ document.addEventListener("keyup", function (event) {
         moveDown();
     }
 });
+
+let reset = document.querySelector('.game__new-game');
+
+reset.addEventListener('click', newGame);
