@@ -4,16 +4,24 @@ function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function addRandomValue() {
-    let added = false;
-    while (added === false) {
-        let randomI = randomInt(0, 4);
-        let randomK = randomInt(0, 4);
-        if (values[randomI][randomK] === 0) {
-            added = true;
-            Math.random() > 0.9 ? values[randomI][randomK] = 4 : values[randomI][randomK] = 2;
+function getAmountFreeCells() {
+    let freeCellsArray = [];
+
+    for (let i = 0; i < values.length; i++) {
+        for (let j = 0; j < values.length; j++) {
+            if (values[i][j] === 0) {
+                freeCellsArray.push([i,j]);
+            }
         }
     }
+    return freeCellsArray;
+}
+
+function addRandomValue() {
+    let freeCells = getAmountFreeCells();
+    const count = freeCells.length;
+    const randomPosition = randomInt(0, count);
+    Math.random() > 0.9 ?  values[freeCells[randomPosition][0]][freeCells[randomPosition][1]] = 4 : values[freeCells[randomPosition][0]][freeCells[randomPosition][1]] = 2;
 }
 
 function loseCheck() {
@@ -94,8 +102,9 @@ const render = () => {
 const renderLoose = function () {
     document.querySelector('.game__field').innerHTML = `<div class="loose">
             <span class="loose__loose">You loose</span>
-            <input type="button" onclick="newGame()" class="loose__new-game" value="New Game">
+            <input type="button" class="loose__new-game" value="New Game">
         </div>`
+    document.querySelector('.loose_new-game').addEventListener('click', newGame);
 };
 
 function newGame() {
