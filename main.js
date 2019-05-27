@@ -103,8 +103,9 @@ const renderLoose = function () {
     document.querySelector('.game__field').innerHTML = `<div class="loose">
             <span class="loose__loose">You loose</span>
             <input type="button" class="loose__new-game" value="New Game">
-        </div>`
-    document.querySelector('.loose_new-game').addEventListener('click', newGame);
+        </div>`;
+    let loosReset = document.querySelector('.loose__new-game');
+    loosReset.addEventListener('click', newGame);
 };
 
 function newGame() {
