@@ -106,6 +106,7 @@ const renderLoose = function () {
         </div>`;
     let loosReset = document.querySelector('.loose__new-game');
     loosReset.addEventListener('click', newGame);
+    loosReset.addEventListener('touchend', newGame, false);
 };
 
 function newGame() {

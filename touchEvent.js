@@ -11,7 +11,7 @@ function touchStart(evt) {
     const firstTouch = evt.touches[0];
      xDown = firstTouch.clientX;
      yDown = firstTouch.clientY;
-     evt.preventDefault();
+    evt.preventDefault();
 };
 
 function touchMove(evt) {
@@ -30,15 +30,15 @@ function touchUp(evt) {
     let yDiff = yDown - yUP;
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        if (xDiff > 0) {
+        if (xDiff > 10) {
             moveLeft();
-        } else {
+        } else if (xDiff < -10) {
             moveRight();
         }
     } else {
-        if (yDiff > 0) {
+        if (yDiff > 10) {
             moveUp();
-        } else {
+        } else if (yDiff < -10){
             moveDown();
         }
     }
